@@ -57,3 +57,8 @@ enableRobotsTXT = true
     name = "Categories"
     url = "/categories/"
     weight = 1
+
+[[menu.main]]
+    name = "Tags"
+    url = "/tags/"
+    weight = 0
