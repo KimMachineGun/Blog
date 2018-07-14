@@ -26,11 +26,19 @@ enableEmoji = true
         "style.css"
     ]
 
+    metaTags = [
+        {
+            name = "google-site-verification",
+            content = "Nqmuh17u5wCh9N1MYY0GsLp6lUYmSjsNrTe2v-gMQ5A"
+        }
+    ]
+
     pageNotFoundTitle = "404 - Page not found"
 
     singleViewStyle = "casper"
 
     showSupport = true
+
 [permalinks]
     post = "/:year-:month-:day/:slug/"
 
