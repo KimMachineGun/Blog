@@ -22,6 +22,9 @@ enableEmoji = true
     cover = "cover.jpg"
     description = "Go를 좋아하는 주니어 개발자의 블로그입니다."
     googleAnalytics = "UA-122350868-1"
+    customCss = [
+        "style.css"
+    ]
 
     pageNotFoundTitle = "404 - Page not found"
 
