@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://kimmachinegun.github.io/"
 languageCode = "ko-kr"
 title = "KimMachineGun's Blog"
 disqusShortname = "KimMachineGun"
