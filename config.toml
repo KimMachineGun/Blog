@@ -25,6 +25,7 @@ enableEmoji = true
     customCss = [
         "style.css"
     ]
+    RSSLink = "https://feed43.com/kimmachinegun-rss.xml"
 
     metaTags = [
         {
