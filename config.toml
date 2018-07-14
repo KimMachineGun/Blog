@@ -31,6 +31,10 @@ enableEmoji = true
         {
             name = "google-site-verification",
             content = "Nqmuh17u5wCh9N1MYY0GsLp6lUYmSjsNrTe2v-gMQ5A"
+        },
+        {
+            name = "naver-site-verification",
+            content = "981c33b0498f0e2701488ead0c293407eb16b517"
         }
     ]
 
