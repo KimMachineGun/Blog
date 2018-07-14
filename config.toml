@@ -1,0 +1,42 @@
+baseURL = "/"
+languageCode = "ko-kr"
+title = "KimMachineGun's Blog"
+disqusShortname = "KimMachineGun"
+theme = "hugo-casper-two"
+paginate = 6
+canonifyurls = true
+pygmentsCodeFences = true
+enableEmoji = true
+
+[params]
+    title = "KimMachineGun's Blog"
+    subtitle = "KimMachineGun's Dev Story"
+
+    fbName = "100005756351409"
+    githubName = "KimMachineGun"
+
+    author = "KimMachineGun"
+    authorAvatar = "profile.jpg"
+    authorWebsite = "https://KimMachineGun.github.io"
+
+    cover = "cover.jpg"
+    description = "Go를 좋아하는 주니어 개발자의 블로그입니다."
+    googleAnalytics = "UA-122350868-1"
+
+    pageNotFoundTitle = "404 - Page not found"
+
+    singleViewStyle = "casper"
+
+    showSupport = true
+[permalinks]
+    post = "/:year-:month-:day/:slug/"
+
+[[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 2
+
+[[menu.main]]
+    name = "Categories"
+    url = "/categories/"
+    weight = 1
