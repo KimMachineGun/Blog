@@ -8,3 +8,7 @@ body * {
 code * {
     font-family: 'Nanum Gothic Coding' !important;
 }
+
+.kg-card-markdown > * {
+    max-width: 100%;
+}
