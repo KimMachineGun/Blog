@@ -4,6 +4,7 @@ description: ""
 date: {{ .Date }}
 categories:
 tags:
+keywords:
 draft: true
 ---
 
