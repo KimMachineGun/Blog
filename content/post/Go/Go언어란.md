@@ -12,6 +12,12 @@ tags: [
     "Go언어",
     "프로그래밍"
 ]
+keywords: [
+    "Go",
+    "golang",
+    "Go언어",
+    "프로그래밍"
+]
 image: "post/Go/Go언어란/cover.jpg"
 ---
 
