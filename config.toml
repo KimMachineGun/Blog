@@ -5,7 +5,6 @@ disqusShortname = "KimMachineGun"
 theme = "hugo-casper-two"
 paginate = 6
 canonifyurls = true
-pygmentsCodeFences = true
 enableEmoji = true
 enableRobotsTXT = true
 
@@ -37,6 +36,12 @@ enableRobotsTXT = true
             name = "naver-site-verification",
             content = "981c33b0498f0e2701488ead0c293407eb16b517"
         }
+    ]
+
+    highlightjs = true
+    highlightjsstyle = "monokai"
+    highlightjslanguages = [
+        "go"
     ]
 
     pageNotFoundTitle = "404 - Page not found"
