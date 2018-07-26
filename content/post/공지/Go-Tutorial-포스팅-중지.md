@@ -14,7 +14,6 @@ keywords: [
     "GO언어",
     "golang"
 ]
-draft: true
 ---
 
 ## Go Tutorial의 포스팅 중지 :cry:
