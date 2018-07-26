@@ -1,4 +1,11 @@
 @echo off
+
+cd public
+
+git rm . -r
+
+cd ..
+
 hugo
 
 if %time:~0,1% == " " set time=0%time%

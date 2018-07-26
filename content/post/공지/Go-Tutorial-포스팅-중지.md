@@ -1,6 +1,6 @@
 ---
 title: "Go Tutorial 포스팅 중지"
-description: ""
+description: "Go Tutorial 포스팅을 중지합니다."
 date: 2018-07-26T17:34:21+09:00
 categories: [
     "공지"
