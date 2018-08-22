@@ -8,7 +8,11 @@ cd ..
 
 hugo
 
-if "%time:~0,1%" == " " set timeF=0%time:~1%
+if "%time:~0,1%" == " " (
+    set timeF=0%time:~1%
+) else (
+    set timeF=%time%
+)
 
 git add .
 git commit -m "[%date% %timeF%] Auto Commit"
