@@ -100,6 +100,25 @@ func main() {
 }
 ```
 
-또 다른 방법으로 함수를 사용하지 않고, 새로운 타입을 정의하여 key의 중복을 피할 수 있습니다.  
+또 다른 방법으로 함수를 사용하지 않고, 새로운 타입을 정의하여 key의 중복을 피할 수 있습니다.
 
-이 외에도 다양한 해결 방법이 있을 수 있습니다. 이 포스팅을 통해 단순히 해결방법만을 알아가기보다 key 값이 중복되면 값이 덮어 씌워지고 예상치 못한 문제가 발생할 수 있다는 사실을 인지하고 코드를 작성하면 key 값의 중복으로 인한 문제는 쉽게 해결할 수 있을 것 같습니다. :smile:
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+)
+
+type contextKey struct{}
+
+func main() {
+	ctx := context.Background()
+
+	ctx = context.WithValue(ctx, contextKey{}, "value") // contextKey{}를 key로 사용합니다.
+
+	fmt.Println(ctx.Value(contextKey{})) // value
+}
+```
+
+만약 패키지 단에서 단 하나의 key만을 필요로 한다면, 위와 같이 `struct{}` 타입을 사용하여 key의 중복을 미연에 방지할 수 있습니다.
