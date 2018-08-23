@@ -72,7 +72,7 @@ func B(reqCh chan<- chan int) {
 	fmt.Println("B:", <-resCh)
 }
 
-// C와 동일합니다.
+// A와 동일합니다.
 func C(reqCh chan<- chan int) {
 	resCh := make(chan int)
 	defer close(resCh)
