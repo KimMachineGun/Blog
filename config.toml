@@ -67,3 +67,6 @@ enableRobotsTXT = true
     name = "Tags"
     url = "/tags/"
     weight = 0
+
+[blackfriday]
+    hrefTargetBlank = true
