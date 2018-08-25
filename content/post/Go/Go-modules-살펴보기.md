@@ -18,8 +18,16 @@ keywords: [
     "Go언어",
     "프로그래밍",
     "vgo",
+    "vgo tutorial",
+    "vgo 강의",
+    "vgo란?",
+    "golang vgo",
     "vgo 사용법",
     "dep",
+    "glide",
+    "maven",
+    "npm",
+    "Dependency",
     "의존성 관리",
     "go 1.11",
     "Go modules",
@@ -88,7 +96,7 @@ test/
 module github.com/KimMachineGun/test
 ```
 
-이제 아무 `go` 커맨드를 실행하면 import 된 패키지의 정보가 업데이트 될 것입니다. 저는 바로 빌드하기 위해 `go build` 커맨드를 사용하겠습니다.
+이제 아무런 `go` 커맨드를 실행하면 import 된 패키지의 정보가 업데이트 될 것입니다. 저는 바로 빌드하기 위해 `go build` 커맨드를 사용하겠습니다.
 
 ```cmd
 >go build
