@@ -8,16 +8,20 @@ cd ..
 
 hugo
 
-if "%time:~0,1%" == " " set time=0%time:~1,-0%
-
-git add .
-git commit -m "[%date% %time%] Auto Commit"
-git push origin master
+if "%time:~0,1%" == " " (
+    set timeF=0%time:~1%
+) else (
+    set timeF=%time%
+)
 
 cd public
 
 git add .
-git commit -m "[%date% %time%] Auto Commit"
+git commit -m "[%date% %timeF%] Auto Commit"
 git push origin master
 
 cd ..
+
+git add .
+git commit -m "[%date% %timeF%] Auto Commit"
+git push origin master
