@@ -14,10 +14,6 @@ if "%time:~0,1%" == " " (
     set timeF=%time%
 )
 
-git add .
-git commit -m "[%date% %timeF%] Auto Commit"
-git push origin master
-
 cd public
 
 git add .
@@ -25,3 +21,7 @@ git commit -m "[%date% %timeF%] Auto Commit"
 git push origin master
 
 cd ..
+
+git add .
+git commit -m "[%date% %timeF%] Auto Commit"
+git push origin master
