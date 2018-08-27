@@ -41,7 +41,7 @@ Go는 초기 패키지를 관리하기 위한 마땅한 도구가 없었습니�
 dep은 강력하고, 유용하게 사용되긴 했지만 패키지 버저닝을 위한 궁극적인 커맨드 툴은 아니였습니다. 조금 더 Go-ish하고 넓은 범위에서 패키지를 관리할 툴이 필요했습니다. 그리고 마침내 Russ Cox의 제안으로 vgo 프로젝트가 패키지 버저닝을 위한 **Go**의 공식 프로젝트로 채택되었고, `go 1.11` 버전에서는 Go modules가 도입되어 시험적으로 사용할 수 있게 되었습니다.
 
 ## vgo는 잠시 안녕...
-vgo를 설치하여 Go modules을 사용할 수도 있지만, 이 글에선 `go 1.11` 버전의 `go mod` 커맨드를 통하여 Go modules을 사용할 예정입니다. vgo의 설치는 `go get -u golang.org/x/vgo`을 통해 하실 수 있습니다. vgo에 대한 더 자세한 내용은 [Go & Versioning](https://research.swtch.com/vgo)에서 살펴보실 수 있습니다.
+vgo를 설치하여 Go modules을 사용할 수도 있지만, 이 글에선 `go 1.11` 버전의 `go mod` 커맨드를 통하여 Go modules을 사용할 예정입니다. vgo의 설치는 `go get -u golang.org/x/vgo`을 통해 하실 수 있습니다. vgo 사용법과 더 자세한 내용은 [Go & Versioning](https://research.swtch.com/vgo)에서 살펴보실 수 있습니다.
 
 ## GO111MODULE
 `go 1.11` 버전에서 Go modules가 등장하며 기존 `GOPATH`와 `vendor/`에 따라 동작하던 `go` 커맨드와의 공존을 위한 `GO111MODULE`이라는 임시 환경변수가 생겼습니다. 이 환경변수에는 세 가지 값이 올 수 있습니다. 
@@ -181,7 +181,7 @@ require (
 
 ![실행 결과](/post/Go/Go-modules-살펴보기/실행결과.JPG)
 
-정상적으로 동작하는군요!! 이로써 `go 1.11`에 추가된 Go modules에 대해 간략하게나마 살펴본 것 같습니다. 위에서 다루지 않았지만 간혹 사용될 것 같은 커맨드에 대해선 아래에 추가로 정리하도록 하겠습니다. 
+정상적으로 동작하는군요!! 이로써 `go 1.11`에 추가된 Go modules 사용법에 대해 간략하게나마 살펴본 것 같습니다. 위에서 다루지 않았지만 간혹 사용될 것 같은 커맨드에 대해선 아래에 추가로 정리하도록 하겠습니다. 
 
 ## 커맨드 정리
 - **go mod init [module-name]**  
