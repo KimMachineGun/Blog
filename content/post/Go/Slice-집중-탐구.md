@@ -19,6 +19,11 @@ keywords: [
     "프로그래밍",
     "golang slice",
     "슬라이스",
+    "Append",
+    "Go append",
+    "Go 배열",
+    "배열",
+    "값 추가",
     "Slice",
     "Array"
 ]

@@ -31,6 +31,7 @@ keywords: [
     "의존성 관리",
     "go 1.11",
     "Go modules",
+    "Go modules 사용법",
     "GO111MODULE"
 ]
 ---

@@ -16,7 +16,10 @@ keywords: [
     "Go",
     "golang",
     "Go언어",
-    "프로그래밍",
+	"프로그래밍",
+	"Go Context",
+	"API",
+	"context 사용법",
     "context",
     "WithValue()",
     "interface{}"
