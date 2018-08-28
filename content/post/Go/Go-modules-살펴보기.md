@@ -81,7 +81,7 @@ func main() {
 }
 ```
 
-이 코드 중 주목해서 보셔야 할 곳은 첫 줄의 `// import "github.com/KimMachineGun/hello"` 입니다. 이는 Module이 위치한 경로를 나타냅니다. 일반적으론 `// import "github.com/<user-name>/<repo-name>"`을 사용합니다. 이를 추가하지 않고 모듈을 생성하려면 `go mod init <module-name>`을 사용하시면 됩니다.
+이 코드 중 주목해서 보셔야 할 곳은 첫 줄의 `// import "github.com/KimMachineGun/hello"` 입니다. 이는 모듈이 위치한 경로를 나타냅니다. 일반적으론 `// import "github.com/<user-name>/<repo-name>"`을 사용합니다. 이를 추가하지 않고 모듈을 생성하려면 `go mod init <module-name>`을 사용하시면 됩니다.
 
 모듈을 생성하기 위해 프로젝트 루트 디렉터리에서 `go mod init` 커맨드를 실행합니다. 커맨드가 정상적으로 실행되었다면, 프로젝트 디렉터리의 내부 모습은 다음과 같을 것입니다.
 

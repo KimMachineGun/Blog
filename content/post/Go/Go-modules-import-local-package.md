@@ -1,6 +1,6 @@
 ---
-title: "Go modules에서 local package import하기"
-description: "Go modules에서 local package를 import하는 방법을 알아봅니다."
+title: "Go modules에서 local package 사용하기"
+description: "Go modules에서 local package를 import하여 사용하는 방법을 알아봅니다."
 date: 2018-08-28T15:57:31+09:00
 categories: [
     "Go",
@@ -44,8 +44,8 @@ keywords: [
 Go modules와 `GOPATH`가 공존하고 있는 `go 1.11`에서 Go modules를 사용하면서 몇 가지 불편함을 겪을 수 있습니다. 그 중 local package를 Go modules 프로젝트에 import하는 방법에 대해 알아보도록 하겠습니다.
 
 ## 방법
-1. **가짜 `go.mod` 추가하기**  
-    Go modules 프로젝트에서 import하여 사용하고 싶은 package의 루트 디렉터리에 `go.mod` 파일을 추가합니다. `go.mod` 파일 안의 내용은 비어 있어도 괜찮습니다.
+1. **local package 모듈화 하기**  
+    Go modules 프로젝트에서 import하여 사용하고 싶은 local package의 루트 디렉터리에 `go.mod` 파일을 추가하여 모듈화 합니다. 패키지를 모듈화 하는 방법에 대해서는 [Go modules 살펴보기](/2018-08-25/go-modules-살펴보기/)를 참고하시면 좋을 것 같습니다.
 2. **require 추가하기**  
     Go modules 프로젝트의 `go.mod` 파일 안에 import할 package에 대한 의존성을 추가해야 합니다. `require`은 의존성을 추가하는 구문이고, `replace`가 모듈의 경로를 바꿔주는 구문입니다. `packagename`과 `packagepath`에 각각 import할 package의 이름과 경로를 넣어 주시면 됩니다.
 
