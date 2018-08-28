@@ -32,18 +32,22 @@ keywords: [
     "go 1.11",
     "Go modules",
     "Go modules 사용법",
-    "GO111MODULE"
+    "GO111MODULE",
+    "local package",
+    "GOPATH",
+    "import",
+    "local package import"
 ]
 ---
 
 ## 문제
-Go modules와 `GOPATH`가 공존하고 있는 `go 1.11`에서 Go modules를 사용하면서 몇가지 불편함을 겪을 수 있습니다. 그 중 local package를 Go modules 프로젝트에 import하는 방법에 대해 알아보도록 하겠습니다.
+Go modules와 `GOPATH`가 공존하고 있는 `go 1.11`에서 Go modules를 사용하면서 몇 가지 불편함을 겪을 수 있습니다. 그 중 local package를 Go modules 프로젝트에 import하는 방법에 대해 알아보도록 하겠습니다.
 
 ## 방법
 1. **가짜 `go.mod` 추가하기**  
-    import하고 싶은 package에 빈 `go.mod` 파일을 추가합니다. `go.mod` 파일 안의 내용은 비어있어도 괜찮습니다.
+    Go modules 프로젝트에서 import하여 사용하고 싶은 package의 루트 디렉터리에 `go.mod` 파일을 추가합니다. `go.mod` 파일 안의 내용은 비어 있어도 괜찮습니다.
 2. **require 추가하기**  
-    Go modules 프로젝트의 `go.mod` 파일 안에 의존성을 추가해야 합니다.
+    Go modules 프로젝트의 `go.mod` 파일 안에 import할 package에 대한 의존성을 추가해야 합니다. `require`은 의존성을 추가하는 구문이고, `replace`가 모듈의 경로를 바꿔주는 구문입니다.
 
     ```none
     module example/test
@@ -54,7 +58,7 @@ Go modules와 `GOPATH`가 공존하고 있는 `go 1.11`에서 Go modules를 사�
     ```
 
 3. **import 하기**  
-    위에서 사용한 `packagename` 을 통해 코드에서 import한 후 사용하시면 됩니다.
+    이제 위에서 사용한 `packagename` 을 통해 코드에서 import한 후 사용하시면 됩니다.
 
     ```go
     // main.go
