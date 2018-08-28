@@ -94,7 +94,7 @@ type AddError struct {
 	CalcError
 }
 
-func (a *AddError) Error() string {
+func (a *AddError) Error()  string {
 	return fmt.Sprintf("Add(%v, %v): %v", a.Num1, a.Num2, a.Message)
 }
 
@@ -155,12 +155,14 @@ func Calc(a, b int) error {
 func main() {
 	err := Calc(100, 10)
 	if err != nil {
-		panic(err)
-	}
-
-	err = Calc(100, 0)
-	if err != nil {
-		panic(err)
+		switch err.(type) {
+		case *DivisionError:
+			fmt.Printf("division error detected: %v\n", err)
+		case *AddError:
+			fmt.Printf("add error detected: %v\n", err)
+		default:
+			fmt.Printf("unknown error detected: %v\n", err)
+		}
 	}
 }
 ```
