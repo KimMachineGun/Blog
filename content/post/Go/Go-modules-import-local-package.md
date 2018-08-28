@@ -71,7 +71,7 @@ Go modules와 `GOPATH`가 공존하고 있는 `go 1.11`에서 Go modules를 사�
     )
 
     func main() {
-        fmt.Println(packagename.Sum(1, 3))
+        fmt.Println(packagename.Sum(1, 3)) // 4
     }
     ```
 
