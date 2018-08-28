@@ -47,7 +47,7 @@ Go modules와 `GOPATH`가 공존하고 있는 `go 1.11`에서 Go modules를 사�
 1. **가짜 `go.mod` 추가하기**  
     Go modules 프로젝트에서 import하여 사용하고 싶은 package의 루트 디렉터리에 `go.mod` 파일을 추가합니다. `go.mod` 파일 안의 내용은 비어 있어도 괜찮습니다.
 2. **require 추가하기**  
-    Go modules 프로젝트의 `go.mod` 파일 안에 import할 package에 대한 의존성을 추가해야 합니다. `require`은 의존성을 추가하는 구문이고, `replace`가 모듈의 경로를 바꿔주는 구문입니다.
+    Go modules 프로젝트의 `go.mod` 파일 안에 import할 package에 대한 의존성을 추가해야 합니다. `require`은 의존성을 추가하는 구문이고, `replace`가 모듈의 경로를 바꿔주는 구문입니다. `packagename`과 `packagepath`에 각각 import할 package의 이름과 경로를 넣어 주시면 됩니다.
 
     ```none
     module example/test
@@ -62,7 +62,7 @@ Go modules와 `GOPATH`가 공존하고 있는 `go 1.11`에서 Go modules를 사�
 
     ```go
     // main.go
-    package main // import "local/pkg"
+    package main // import "example/test"
 
     import (
         "fmt"
