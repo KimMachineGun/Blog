@@ -34,7 +34,6 @@ keywords: [
     "Go modules 사용법",
     "GO111MODULE"
 ]
-draft: true
 ---
 
 ## 문제
