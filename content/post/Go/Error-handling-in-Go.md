@@ -77,3 +77,90 @@ func main() {
 위는 `fmt.Errorf()`와 `errors.New()` 같은 간단한 방법을 통해 만든 `error`를 사용한 코드입니다. 하지만 이와 같이 만든 `error`는 에러 메세지를 제외한 다른 어떠한 값도 같고 있지 않습니다. 에러 메세지만을 통해서도 에러에 대한 간략한 정보를 보여줄 수 있지만, 프로그램 내부에서 에러 메세지만을 가지고 에러를 다룬다는 것은 힘든 일입니다.
 
 `error`를 보다 정교하게 다루기 위해선 에러가 발생 된 이유, 환경 등에 대한 값을 알아야 합니다. 그럼 값을 내장하고 있는 `error`를 만들어 보도록 하겠습니다.
+
+```go
+package main
+
+import (
+	"fmt"
+)
+
+type CalcError struct {
+	Num1, Num2 int
+	Message    string
+}
+
+type AddError struct {
+	CalcError
+}
+
+func (a *AddError) Error() string {
+	return fmt.Sprintf("Add(%v, %v): %v", a.Num1, a.Num2, a.Message)
+}
+
+type DivisionError struct {
+	CalcError
+}
+
+func (d *DivisionError) Error() string {
+	return fmt.Sprintf("Division(%v, %v): %v", d.Num1, d.Num2, d.Message)
+}
+
+func Add(a, b int) (int, error) {
+	if a == 4 || b == 4 {
+		return 0, &AddError{
+			CalcError: CalcError{
+				Num1:    a,
+				Num2:    b,
+				Message: "I don't link 4",
+			},
+		}
+	}
+
+	return a + b, nil
+}
+
+func Division(a, b int) (int, error) {
+	if b == 0 {
+		return 0, &DivisionError{
+			CalcError: CalcError{
+				Num1:    a,
+				Num2:    b,
+				Message: "Division by zero",
+			},
+		}
+	}
+
+	return a / b, nil
+}
+
+func Calc(a, b int) error {
+	val, err := Add(a, b)
+	if err != nil {
+		return err
+	}
+
+	fmt.Println("Add:", val)
+
+	val, err = Division(a, b)
+	if err != nil {
+		return err
+	}
+
+	fmt.Println("Division:", val)
+
+	return nil
+}
+
+func main() {
+	err := Calc(100, 10)
+	if err != nil {
+		panic(err)
+	}
+
+	err = Calc(100, 0)
+	if err != nil {
+		panic(err)
+	}
+}
+```
