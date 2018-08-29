@@ -31,7 +31,7 @@ keywords: [
 ---
 
 ## *"Errors are values" <small><small>- Rob Pike</small></small>*
-"Errors are values"는 **Go**의 개발자이신 Rob Pike님이 Go Proverbs를 발표하시면서 하신 말씀입니다. 그렇다면 **Go**에서의 Error가 도대체 뭐길래 값이란 걸까요? **Go**의 `error`는 다음과 같이 정의되어 있습니다.
+"Errors are values"는 **Go**의 개발자이신 Rob Pike님이 Go Proverbs를 발표하시면서 하신 말씀입니다. 그렇다면 **Go**에서의 Error가 도대체 뭐길래 값이란 걸까요? **Go**의 `error`는 다음과 같이 `interface`로 정의되어 있습니다.
 
 ```go
 type error interface {
