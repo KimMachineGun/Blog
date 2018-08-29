@@ -28,7 +28,6 @@ keywords: [
     "덕타이핑",
     "assertion"
 ]
-draft: true
 ---
 
 ## *"Errors are values" <small><small>- Rob Pike</small></small>*
