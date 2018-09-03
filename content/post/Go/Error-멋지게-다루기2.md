@@ -26,7 +26,13 @@ keywords: [
     "type error interface",
     "golang interface",
     "덕타이핑",
-    "assertion"
+    "assertion",
+    "error wrapping",
+    "errors",
+    "wrapping",
+    "에러 래핑",
+    "래핑",
+    "에러"
 ]
 ---
 
